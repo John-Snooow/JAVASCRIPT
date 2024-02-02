@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com Dom</title>
+    <style>
+        body{
+            background-color: rgba(0, 0, 255, 0.616);
+            color: white;
+            font: normal 18pt arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Inciciando estudos com DOM</h1>
+    <p>aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
+    <div id="msg">Clique em mim</div>
+    <script>
+        var p1 = window.document.getElementsByTagName('p')[0]// a tag getElementsByTagName esta no plural ela vai puchar mais de um paragrafo, para escolher apenas um paragrafo eu coloquei logo apos o ('p') uma chave com o numero 1 para me referir ao segundo paragrafo, se eu quiser chamar o primeiro paragrafo eu devo digitar o 0.
+        window.document.write('Esta escrito assim no primeiro paragrafo : ' + p1.innerText) // p1.innerText para chamar a variavel p1
+        var d = window.document.getElementById('msg')// variavel para a div usando um id
+        d.style.background = 'green'
+        d.innerText = 'Estou aguardanado'// modifiquei a divi usando o id
+    </script>
+</body>
+</html>
