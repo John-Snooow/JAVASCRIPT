@@ -17,8 +17,14 @@
     </style>
 </head>
 <body>
-    <div id="area">
+    <div id="area" onclick="clicar()">
         Interaja...
     </div>
+    <script>
+        function clicar(){ //coloquei esta funcão para chamar a iteração da divi a cima "este é um dos metodos e as configs desta função estaõ a baixo"
+            var a = window.document.getElementById('area')// aqui ele vai fazer uma ligação do elemento "a" com o elemento area da div a cima
+            a.innerText = 'clicou'// aqui ele vaio mudar o conteudo do obijeto para clicou 
+        }
+    </script>
 </body>
 </html>
