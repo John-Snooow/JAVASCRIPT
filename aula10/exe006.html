@@ -17,13 +17,25 @@
     </style>
 </head>
 <body>
-    <div id="area" onclick="clicar()">
+    <div id="area">
         Interaja...
     </div>
     <script>
+        var a = window.document.getElementById('area')// aqui ele vai fazer uma ligação do elemento "a" com o elemento area da div a cima, este objeto vai ficar de fora das functions para ficar com o escopo glogal
+        a.addEventListener('click', clicar)//disparo de evento para clicar 
+        a.addEventListener('mouseenter', entrar)// disparo de evento para entra
+        a.addEventListener('mouseout', sair)// disparo de evento para sair
+
         function clicar(){ //coloquei esta funcão para chamar a iteração da divi a cima "este é um dos metodos e as configs desta função estaõ a baixo"
-            var a = window.document.getElementById('area')// aqui ele vai fazer uma ligação do elemento "a" com o elemento area da div a cima
-            a.innerText = 'clicou'// aqui ele vaio mudar o conteudo do obijeto para clicou 
+            a.innerText = 'clicou!'// aqui ele vaio mudar o conteudo do obijeto para clicou 
+            a.style.background = 'red' // para ficar vermelho quando eu clicar
+        }
+        function entrar (){
+            a.innerText = 'entrou!'
+        }
+        function sair(){
+            a.innerText = 'saiu!'
+            a.style.background = 'green'//aqui ele vai voltar a ficar verde, depois que eu clicar e ele ficar vermelho
         }
     </script>
 </body>
