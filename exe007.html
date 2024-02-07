@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando Numeros</title>
+    <style>
+        body{
+            font: normal 18pt arial;
+        }
+        input{
+            font: normal 18pt arial;
+            width: 100px;
+            color: rgb(16, 122, 122);
+            text-align: center;
+        }
+        div#res{
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Somando Valores</h1>
+    <input type="number" name="txtn1" id="txtn1"> +<!--para colocar os numeros-->
+    <input type="number" name="txtn2" id="txtn2">
+    <input type="button" value="Somar" onclick="somar()">
+    <div id="res"><strong>Resultado</strong></div>
+    <script>
+        function somar(){
+            var tn1 = window.document.getElementById('txtn1')// aqui eu fiz com o getElementById('txtn1') mas pode ser feito do jeito do de baixo tambem
+            var tn2 = window.document.querySelector('input#txtn2')// aqui funciona da mesma forma do de cima, coloquei os doi jeitos mais fica a criterio
+            var res = window.document.getElementById('res')
+            var n1 = Number(tn1.value)// aqui é para transformar o valor de n1 e mas a baixo para transformar o valor de n2 em forma de numero para não concatenar 
+            var n2 = Number(tn2.value)
+            var s = n1 + n2
+            res.innerHTML = `A soma entre ${n1} e ${n2} é igual a <strong>${s}</strong>`
+        }
+    </script>
+</body>
+</html>
