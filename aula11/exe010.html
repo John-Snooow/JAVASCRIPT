@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detran</title>
+</head>
+<body>
+    <h1>Sistema de multas</h1>
+    Velucidade do carro: <input type="number" name="txtvel" id="txtvel"> Km/h
+    <input type="button" value="Verificar" onclick="calcular()">
+    <div id="res">
+
+    </div>
+    <script>
+        function calcular(){
+            var txtv = window.document.querySelector('input#txtvel')// podendo ser de uma foma mais facil como esta na var a baixo, as duas estaõ corretas
+            var res = window.document.getElementById('res')// desta forma fica mais simplificada
+            var vel = Number(txtv.value)// esta tag é para fazer uma conversão
+            res.innerHTML = `<p>Sua velocidade atual é de <strong>${vel}Km/s</strong></p>`
+            if (vel>60){
+                res.innerHTML += `Você foi <strong>MULTADO</strong> por exesso de velocidade`
+            }
+            res.innerHTML += `<p>Dirija com cuidado!</p>`
+        }
+    </script>
+</body>
+</html>
