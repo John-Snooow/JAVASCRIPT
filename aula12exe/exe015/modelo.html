@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador de Idade</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header>
+        <h1>Verificador de Idade</h1>
+    </header>
+    <section>
+        <div>
+            <p>Ano de Nascimento: 
+                <input type="number" name="txtano" id="txtano" min="0">
+            </p>
+            <p>Sexo: 
+                <input type="radio" name="radsex" id="masc" checked> <!--o checkd é para aparecer ja marcado a opição masculina-->
+                <label for="masc">Masculino</label>
+                <input type="radio" name="radsex" id="fem"><!--o radsex nas duas opições aqui e em cima é para quando for celecionado um o outro vai desmarcar altomaticamente-->
+                <label for="fem">Feminino</label>
+            </p>
+            <p>
+                <input type="button" value="Verificar" onclick="verificar()"><!--o onclick é para verificar o Js efazer a ligação -->
+            </p>
+        </div>
+        <div id="res">
+            Preencha os dados a cima para ver o resultado
+        </div>
+    </section>
+    <footer>
+        <p>&copy; John Frank</p>
+    </footer>
+    <script src="script.js"></script><!--para criar um arquivo esterno de Js e poder  editar por la assim como o link do CSS bem mais a cima-->
+</body>
+</html>
