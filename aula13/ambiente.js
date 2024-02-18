@@ -1,4 +1,5 @@
 //ESTRUTURA DE REPETIÇÂO 
+// na aula 14 é ensinado a como fazer a mesma coisa e de forma mais simplificada
 // "do" Estrutura de repetição com teste lógico no final lembrando que as duas formas funcionam
 var c = 1 //contrador
 do{
